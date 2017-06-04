@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'rooms/show'
+  get '/chat',       to: 'rooms#show'
 
   root to: 'static_pages#home'
 
@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   get 'static_pages/help'
   resources :users
   resources :doctors
+
+  mount ActionCable.server => '/cable'
 
 end

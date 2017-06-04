@@ -18,8 +18,12 @@
     </section>
   </div>
 </h1>
-<% if @doctor.doctor_login_status.is_login == true then %>
-  <button type="button" class="btn btn-lg btn-success">チャットで相談</button>
-<% else %>
-  <button type="button" class="btn btn-lg btn-danger">未ログイン</button>
-<% end %>
+<div class="row">
+  <aside class="col-md-3">
+    <% if @doctor.doctor_login_status.is_login == true then %>
+      <%= button_to "チャットで相談", {controller: 'rooms', action: 'show'}, {method: :get, class: "chat-btn btn btn-success"} %>
+    <% else %>
+      <%= button_to "未ログイン", {controller: 'rooms', action: 'show'}, {method: :get, class: "chat-btn btn btn-error", disabled: true}%>
+  <% end %>
+  </aside>
+</div>

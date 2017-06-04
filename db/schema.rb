@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170604075039) do
+ActiveRecord::Schema.define(version: 20170604095434) do
 
   create_table "doctor_login_statuses", force: :cascade do |t|
     t.integer "doctor_id"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20170604075039) do
     t.string "graduated_year"
     t.string "specialism"
     t.string "belong_conference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "user_id"
+    t.integer "user_kind"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,2 +1,9 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+<h2>相談をしてね</h2>
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<form>
+  <label>コメント:</label><br>
+  <input type="text" data-behavior="room_speaker" class="chat-spk">
+</form>
