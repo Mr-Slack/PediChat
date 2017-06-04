@@ -1,0 +1,15 @@
+<h1>ドクターリスト</h1>
+
+<ul class="doctors">
+  <% @doctors.each do |doctor| %>
+    <li>
+      <%= image_tag("doctor.png", :size => "64x64") %>
+      <%= link_to doctor.name, doctor %>
+      <% if doctor.doctor_login_status.is_login == true then %>
+        <span class="glyphicon glyphicon-user color-green"></span>
+      <% else %>
+        <span class="glyphicon glyphicon-user color-red"></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

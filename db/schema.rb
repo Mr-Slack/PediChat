@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170603073315) do
+ActiveRecord::Schema.define(version: 20170604075039) do
+
+  create_table "doctor_login_statuses", force: :cascade do |t|
+    t.integer "doctor_id"
+    t.boolean "is_login"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_doctor_login_statuses_on_doctor_id", unique: true
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.string "graduated_from"
+    t.string "graduated_year"
+    t.string "specialism"
+    t.string "belong_conference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rooms/show'
+
   root to: 'static_pages#home'
 
   get    '/login',   to: 'sessions#new'
@@ -7,5 +9,6 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   get 'static_pages/help'
   resources :users
+  resources :doctors
 
 end

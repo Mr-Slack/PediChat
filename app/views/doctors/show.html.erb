@@ -1,0 +1,25 @@
+<h1>
+  <div class="row">
+    <section class="doctor_info">
+      <aside class="col-md-4">
+        <%= image_tag 'doctor.png' %>
+      </aside>
+      <div class="col-md-8">
+        <div class="numberlist">
+          <ul>
+            <li>氏名：<%= @doctor.name %></li>
+            <li>卒業大学：<%= @doctor.graduated_from %></li>
+            <li>卒業年度：<%= @doctor.graduated_year %></li>
+            <li>専門分野：<%= @doctor.specialism %></li>
+            <li>所属学会：<%= @doctor.belong_conference %></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</h1>
+<% if @doctor.doctor_login_status.is_login == true then %>
+  <button type="button" class="btn btn-lg btn-success">チャットで相談</button>
+<% else %>
+  <button type="button" class="btn btn-lg btn-danger">未ログイン</button>
+<% end %>
