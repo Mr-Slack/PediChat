@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/portfolio',  to: 'portfolio#index'
+
   get '/chat',       to: 'rooms#show'
 
   root to: 'static_pages#home'
