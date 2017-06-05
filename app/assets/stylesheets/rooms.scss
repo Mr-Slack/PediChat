@@ -1,0 +1,45 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #777;
+}
+
+.chat-spk {
+  border:0;
+  padding:10px;
+  font-size:1.3em;
+  font-family:Arial, sans-serif;
+  color:#aaa;
+  border:solid 1px #ccc;
+  margin:0 0 20px;
+  width:800px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.message{
+  background-color:#98FB98;
+  border-radius:5px;
+  color:#000000;
+  position:relative;
+  padding:8px;
+  margin:20px;
+  width:500px;
+}
+.message::after{
+  border-top:solid 7px transparent;
+  border-bottom:solid 7px transparent;
+  border-left:solid 10px #98FB98;
+  right:-10px;
+  content:"";
+  display:block;
+  height:0;
+  top:20%;
+  position:absolute;
+  width:0;
+}

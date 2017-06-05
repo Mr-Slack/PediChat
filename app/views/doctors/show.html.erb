@@ -1,0 +1,29 @@
+<h1>
+  <div class="row">
+    <section class="doctor_info">
+      <aside class="col-md-4">
+        <%= image_tag 'doctor.png' %>
+      </aside>
+      <div class="col-md-8">
+        <div class="numberlist">
+          <ul>
+            <li>氏名：<%= @doctor.name %></li>
+            <li>卒業大学：<%= @doctor.graduated_from %></li>
+            <li>卒業年度：<%= @doctor.graduated_year %></li>
+            <li>専門分野：<%= @doctor.specialism %></li>
+            <li>所属学会：<%= @doctor.belong_conference %></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</h1>
+<div class="row">
+  <aside class="col-md-3">
+    <% if @doctor.doctor_login_status.is_login == true then %>
+      <%= button_to "チャットで相談", {controller: 'rooms', action: 'show'}, {method: :get, class: "chat-btn btn btn-success"} %>
+    <% else %>
+      <%= button_to "未ログイン", {controller: 'rooms', action: 'show'}, {method: :get, class: "chat-btn btn btn-error", disabled: true}%>
+  <% end %>
+  </aside>
+</div>
