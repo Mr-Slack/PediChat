@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "登録ありがとうございます。"
       remember @user
       redirect_to @user
     else
@@ -27,7 +27,8 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      # 更新に成功した場合を扱う。
+      flash[:success] = "更新に成功しました。"
+      redirect_to @user
     else
       render 'edit'
     end
