@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:23b5a4c9d9d16434cf3133724da702df@crestfish.redistogo.com:10053/
   channel_prefix: PediChat_production
