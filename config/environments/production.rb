@@ -92,7 +92,7 @@ Rails.application.configure do
   # original add
   config.serve_static_assets = true
   config.assets.digest = true
-  config.action_cable.allowed_request_origins = [ '/https?:\/\/.*/', '/http?:\/\/.*/']
+  config.action_cable.allowed_request_origins = [ 'https://aqueous-sands-31312.herokuapp.com', 'http://aqueous-sands-31312.herokuapp.com']
 
   config.web_socket_server_url = "wss://aqueous-sands-31312.herokuapp.com/cable"
 end
