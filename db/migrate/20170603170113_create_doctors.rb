@@ -5,7 +5,7 @@ class CreateDoctors < ActiveRecord::Migration[5.1]
       t.string :graduated_from
       t.string :graduated_year
       t.string :specialism
-      t.string :belong_conference 
+      t.string :belong_conference
       t.timestamps
     end
   end
